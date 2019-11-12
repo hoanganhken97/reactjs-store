@@ -5,12 +5,15 @@ import "./App.css";
 import {Route, Link, Switch, Redirect} from "react-router-dom";
 
 import Home from "./components/home/Home";
-import About from "./components/About";
 import Detail from "./components/Detail";
 import Features from "./components/features/Features"
 import Shop from "./components/Shop/Shop";
 import BlogDetail from "./components/blog/BlogDetail";
 import Blog from "./components/blog/Blog";
+import Messages from "./components/Messages";
+import About from "./components/about/About";
+import Contact from "./components/contact/Contact";
+
 
 class App extends Component {
     render() {
@@ -92,11 +95,11 @@ class App extends Component {
                                         </li>
 
                                         <li>
-                                            <a href="about.html">About</a>
+                                            <a href="/about">About</a>
                                         </li>
 
                                         <li>
-                                            <a href="contact.html">Contact</a>
+                                            <a href="/contact">Contact</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -130,6 +133,7 @@ class App extends Component {
                         <Route path="/blog" component={Blog}/>
                         <Route path="/features" component={Features}/>
                         <Route path="/about" component={About}/>
+                        <Route path="/contact" component={Contact}/>
                         <Route path="/detail/:id" component={Detail}/>
                         <Route path="/blogdetail" component={BlogDetail}/>
                         <Redirect to="/"/>
