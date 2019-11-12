@@ -70,11 +70,11 @@ class App extends Component {
                                 <div className="menu-desktop">
                                     <ul className="main-menu">
                                         <li className="active-menu">
-                                            <a href="index.html">Home</a>
+                                            <a href="/">Home</a>
                                             <ul className="sub-menu">
-                                                <li><a href="index.html">Homepage 1</a></li>
-                                                <li><a href="home-02.html">Homepage 2</a></li>
-                                                <li><a href="home-03.html">Homepage 3</a></li>
+                                                <li><a href="/">Homepage 1</a></li>
+                                                <li><a href="/">Homepage 2</a></li>
+                                                <li><a href="/">Homepage 3</a></li>
                                             </ul>
                                         </li>
 
