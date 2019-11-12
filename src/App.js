@@ -10,10 +10,11 @@ import Features from "./components/features/Features"
 import Shop from "./components/Shop/Shop";
 import BlogDetail from "./components/blog/BlogDetail";
 import Blog from "./components/blog/Blog";
+import Messages from "./components/Messages";
+import Contact from "./components/contact/Contact";
 import { connect } from "react-redux";
 import {getCart} from './redux/action/cartAction';
 import About from './components/About';
-import Contact from './components/contact/Contact'
 class App extends Component {
     componentDidMount() {
         this.props.getCart();

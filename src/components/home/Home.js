@@ -58,7 +58,7 @@ class Home extends Component {
                             return (
                                 <div className="col-xs-4 col-sm-4 col-md-4 col-lg-4">
                                     <div className="category">
-                                        <Link to={`/detail/${data.id}`}>
+                                        <Link to={'/shop'}>
                                             <ul className="list-group">
                                                 <img src={data.image} className="App-logo" alt="logo"/>
                                                 <p>{data.title}</p>
