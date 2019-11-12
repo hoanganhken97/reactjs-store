@@ -1,6 +1,6 @@
 import React, {Component} from "react";
 import firebase from "../../utils/firebaseConfig";
-import "./ShopCss.css"
+import "./shopCss.css"
 import {Link} from "react-router-dom";
 
 export default class Shop extends Component {
