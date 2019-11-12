@@ -22,7 +22,6 @@ export default class Features extends Component {
             });
         }
     };
-
     render() {
         return (
             <div className="container">
