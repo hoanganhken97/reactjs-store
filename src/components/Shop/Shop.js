@@ -1,6 +1,7 @@
 import React, {Component} from "react";
 import firebase from "../../utils/firebaseConfig";
 import "./shopCss.css"
+import {Link} from "react-router-dom";
 
 export default class Shop extends Component {
     constructor(props) {
@@ -83,7 +84,7 @@ export default class Shop extends Component {
                                         </ul>
                                     </div>
                                     <div className="product-content">
-                                        <h4 className="title"><a href="#">{item.title}</a></h4>
+                                        <h4 className="title"><Link to={`/detail/${item.id}`}>{item.title}</Link></h4>
                                         <h4 className="title">$ {item.price}</h4>
                                     </div>
                                     <a className="view-icon">
