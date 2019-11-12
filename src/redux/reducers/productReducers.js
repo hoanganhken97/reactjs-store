@@ -6,7 +6,8 @@ const initialState = {
     product: [],
     maps: [],
     isFetching: false,
-    error: false
+    error: false,
+    category:[]
 };
 
 export default function (state = initialState, action) {
@@ -16,6 +17,11 @@ export default function (state = initialState, action) {
                 ...state,
                 product: action.data
             };
+            case types.CATEGORY:
+                return{
+                    ...state,
+                    category:action.category
+                }
         default:
             return state
     }

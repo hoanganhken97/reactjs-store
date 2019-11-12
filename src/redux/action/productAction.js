@@ -12,3 +12,11 @@ export const ListdataProduct = () => {
         });
     };
 };
+//category
+export const Category =()=>{
+    return(dispatch) =>{
+        db.ref('category').on('value',snapshot =>{
+            dispatch({type:types.CATEGORY,category:Object.values(snapshot.val())})
+        })
+    }
+}
