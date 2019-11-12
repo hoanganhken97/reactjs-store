@@ -78,7 +78,7 @@ class App extends Component {
 							</li>
 
 							<li>
-								<a href="product.html">Shop</a>
+								<a href="/shop">Shop</a>
 							</li>
 
 							<li class="label1" data-label1="hot">

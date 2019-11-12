@@ -65,7 +65,7 @@ h3.h3 {
     margin: 0;
     list-style: none;
     opacity: 0;
-    transform: translateY(-50%) translateX(-50%);
+    transform: translateY(-60%) translateX(-50%);
     position: absolute;
     top: 60%;
     left: 50%;
@@ -204,4 +204,12 @@ h3.h3 {
 .view-icon{
     float: right;
     margin-top: 10px;
+}
+.view-quick{
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    border-radius: 20px;
 }
