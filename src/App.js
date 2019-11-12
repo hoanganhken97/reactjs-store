@@ -11,28 +11,18 @@ import Features from "./components/features/Features"
 import Shop from "./components/Shop/Shop";
 import BlogDetail from "./components/blog/BlogDetail";
 import Blog from "./components/blog/Blog";
-
+import { connect } from "react-redux";
+import {getCart} from './redux/action/cartAction';
 class App extends Component {
+    componentDidMount() {
+        this.props.getCart();
+    }
     render() {
+        const {cart} = this.props;
+        console.log('cartRouter: ' + JSON.stringify(cart));
         return (
-            // <div >
+           
             <div>
-                {/* <header className="App-header">
-                    <h1 className="App-title">Welcome to React</h1>
-                </header>
-                <nav class="navbar navbar-default navbar-static-top" role="navigation">
-                    <a class="navbar-brand" href="/">Home</a>
-                    <ul class="nav navbar-nav">
-                        <li class="active">
-                            <a href="/messages">Messages</a>
-                        </li>
-                        <li>
-                            <a href="/about">About</a>
-                        </li>
-                    </ul>
-                </nav> */}
-
-
                 <header>
                     <div className="container-menu-desktop">
                         <div className="top-bar">
@@ -109,7 +99,7 @@ class App extends Component {
 
                                     <div
                                         className="icon-header-item cl2 hov-cl1 trans-04 p-l-22 p-r-11 icon-header-noti js-show-cart"
-                                        data-notify="2">
+                                        data-notify={cart.length}>
                                         <i className="zmdi zmdi-shopping-cart"></i>
                                     </div>
 
@@ -293,4 +283,10 @@ class App extends Component {
     }
 }
 
-export default App;
+function mapStateToProps(state) {
+    return {
+        cart: state.cartReducers,
+    };
+}
+
+export default connect(mapStateToProps, {getCart})(App);
