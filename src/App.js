@@ -5,7 +5,6 @@ import "./App.css";
 import {Route, Link, Switch, Redirect} from "react-router-dom";
 
 import Home from "./components/home/Home";
-import About from "./components/About";
 import Detail from "./components/Detail";
 import Features from "./components/features/Features"
 import Shop from "./components/Shop/Shop";
@@ -21,7 +20,7 @@ class App extends Component {
         const {cart} = this.props;
         console.log('cartRouter: ' + JSON.stringify(cart));
         return (
-           
+
             <div>
                 <header>
                     <div className="container-menu-desktop">
@@ -82,15 +81,15 @@ class App extends Component {
                                         </li>
 
                                         <li>
-                                            <a href="about.html">About</a>
+                                            <a href="/about">About</a>
                                         </li>
 
                                         <li>
-                                            <a href="contact.html">Contact</a>
+                                            <a href="/contact">Contact</a>
                                         </li>
                                     </ul>
                                 </div>
-
+//
                                 <div className="wrap-icon-header flex-w flex-r-m">
                                     <div
                                         className="icon-header-item cl2 hov-cl1 trans-04 p-l-22 p-r-11 js-show-modal-search">
@@ -120,6 +119,7 @@ class App extends Component {
                         <Route path="/blog" component={Blog}/>
                         <Route path="/features" component={Features}/>
                         <Route path="/about" component={About}/>
+                        <Route path="/contact" component={Contact}/>
                         <Route path="/detail/:id" component={Detail}/>
                         <Route path="/blogdetail" component={BlogDetail}/>
                         <Redirect to="/"/>
