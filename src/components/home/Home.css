@@ -21,7 +21,8 @@
     margin: 0 auto;
 }
 .row{
-    margin: auto;
+    margin:30px auto 0px ;
+
 }
 .category{
     text-align: center;
