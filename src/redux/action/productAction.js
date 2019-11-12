@@ -8,7 +8,7 @@ const db = firebase.database();
 export const ListdataProduct = () => {
     return (dispatch) => {
         db.ref('product').on('value', snapshot => {
-            dispatch({type: types.FETCH_PRODUCTS_LIST, data: Object.values(snapshot.val())});
+            dispatch({type: types.FETCH_PRODUCTS_LIST, data: Object.values(snapshot.val()),isLoading:false});
         });
     };
 };
@@ -16,7 +16,7 @@ export const ListdataProduct = () => {
 export const Category =()=>{
     return(dispatch) =>{
         db.ref('category').on('value',snapshot =>{
-            dispatch({type:types.CATEGORY,category:Object.values(snapshot.val())})
+            dispatch({type:types.CATEGORY,category:Object.values(snapshot.val()),isLoading:false})
         })
     }
 }
