@@ -8,6 +8,7 @@ import Home from "./components/Home";
 import About from "./components/About";
 import Detail from "./components/Detail";
 import Messages from "./components/Messages";
+import Shop from "./components/Shop/Shop";
 
 class App extends Component {
   render() {
@@ -29,47 +30,47 @@ class App extends Component {
                     </ul>
                 </nav> */}
 
-      
+
                 <header>
-		<div className="container-menu-desktop">
-			<div className="top-bar">
-				<div className="content-topbar flex-sb-m h-full container">
-					<div className="left-top-bar">
+		<div class="container-menu-desktop">
+			<div class="top-bar">
+				<div class="content-topbar flex-sb-m h-full container">
+					<div class="left-top-bar">
 						Free shipping for standard order over $100
 					</div>
 
-					<div className="right-top-bar flex-w h-full">
-						<a href="#" className="flex-c-m trans-04 p-lr-25">
+					<div class="right-top-bar flex-w h-full">
+						<a href="#" class="flex-c-m trans-04 p-lr-25">
 							Help & FAQs
 						</a>
 
-						<a href="#" className="flex-c-m trans-04 p-lr-25">
+						<a href="#" class="flex-c-m trans-04 p-lr-25">
 							My Account
 						</a>
 
-						<a href="#" className="flex-c-m trans-04 p-lr-25">
+						<a href="#" class="flex-c-m trans-04 p-lr-25">
 							EN
 						</a>
 
-						<a href="#" className="flex-c-m trans-04 p-lr-25">
+						<a href="#" class="flex-c-m trans-04 p-lr-25">
 							USD
 						</a>
 					</div>
 				</div>
 			</div>
 
-			<div className="wrap-menu-desktop">
-				<nav className="limiter-menu-desktop container">
-					
+			<div class="wrap-menu-desktop">
+				<nav class="limiter-menu-desktop container">
+
 					{/* <a href="#" class="logo">
 						<img src="images/icons/logo-01.png" alt="IMG-LOGO">
 					</a> */}
 
-					<div className="menu-desktop">
-						<ul className="main-menu">
-							<li className="active-menu">
+					<div class="menu-desktop">
+						<ul class="main-menu">
+							<li class="active-menu">
 								<a href="index.html">Home</a>
-								<ul className="sub-menu">
+								<ul class="sub-menu">
 									<li><a href="index.html">Homepage 1</a></li>
 									<li><a href="home-02.html">Homepage 2</a></li>
 									<li><a href="home-03.html">Homepage 3</a></li>
@@ -80,7 +81,7 @@ class App extends Component {
 								<a href="product.html">Shop</a>
 							</li>
 
-							<li className="label1" data-label1="hot">
+							<li class="label1" data-label1="hot">
 								<a href="shoping-cart.html">Features</a>
 							</li>
 
@@ -96,23 +97,23 @@ class App extends Component {
 								<a href="contact.html">Contact</a>
 							</li>
 						</ul>
-					</div>	
+					</div>
 
-					<div className="wrap-icon-header flex-w flex-r-m">
-						<div className="icon-header-item cl2 hov-cl1 trans-04 p-l-22 p-r-11 js-show-modal-search">
-							<i className="zmdi zmdi-search"></i>
+					<div class="wrap-icon-header flex-w flex-r-m">
+						<div class="icon-header-item cl2 hov-cl1 trans-04 p-l-22 p-r-11 js-show-modal-search">
+							<i class="zmdi zmdi-search"></i>
 						</div>
 
-						<div className="icon-header-item cl2 hov-cl1 trans-04 p-l-22 p-r-11 icon-header-noti js-show-cart" data-notify="2">
-							<i className="zmdi zmdi-shopping-cart"></i>
+						<div class="icon-header-item cl2 hov-cl1 trans-04 p-l-22 p-r-11 icon-header-noti js-show-cart" data-notify="2">
+							<i class="zmdi zmdi-shopping-cart"></i>
 						</div>
 
-						<a href="#" className="dis-block icon-header-item cl2 hov-cl1 trans-04 p-l-22 p-r-11 icon-header-noti" data-notify="0">
-							<i className="zmdi zmdi-favorite-outline"></i>
+						<a href="#" class="dis-block icon-header-item cl2 hov-cl1 trans-04 p-l-22 p-r-11 icon-header-noti" data-notify="0">
+							<i class="zmdi zmdi-favorite-outline"></i>
 						</a>
 					</div>
 				</nav>
-			</div>	
+			</div>
 		</div>
         </header>
         <div className="App-intro">
@@ -120,6 +121,7 @@ class App extends Component {
             <Route exact path="/" component={Home} />
             <Route path="/messages" component={Messages} />
             <Route path="/about" component={About} />
+			  <Route path="/shop" component={Shop} />
             <Route path="/detail/:id" component={Detail} />
             <Redirect to="/" />
           </Switch>

@@ -1,7 +1,7 @@
 import React, {Component} from "react";
 import firebase from "../utils/firebaseConfig";
 
-export default class Home extends Component {
+export default class Detail extends Component {
     constructor(props) {
         super(props);
         this.firebase = firebase.database();
