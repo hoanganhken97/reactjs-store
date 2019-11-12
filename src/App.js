@@ -12,6 +12,8 @@ import BlogDetail from "./components/blog/BlogDetail";
 import Blog from "./components/blog/Blog";
 import { connect } from "react-redux";
 import {getCart} from './redux/action/cartAction';
+import About from './components/About';
+import Contact from './components/contact/Contact'
 class App extends Component {
     componentDidMount() {
         this.props.getCart();
