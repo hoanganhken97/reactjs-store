@@ -32,6 +32,9 @@
 .category:hover{
     background-color: #6775d4cc;
 }
+.category:hover>img{
+    opacity: 0.5;
+}
 .category :hover>p{
     color: white;
 }

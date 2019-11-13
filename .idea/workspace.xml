@@ -3,8 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="35b24a63-37a5-4693-a3e4-323a913b3117" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Detail.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Detail.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/reducers/cartReducers.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/reducers/cartReducers.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/home/Home.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/home/Home.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/listCategory/ListCategory.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/listCategory/ListCategory.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/listCategory/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/listCategory/styles.css" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
