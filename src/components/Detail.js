@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import firebase from "../utils/firebaseConfig";
-import {addToCart} from '../redux/action/cartAction';
+import {addProductToCart} from '../redux/action/cartAction';
 import { connect } from "react-redux";
  class Detail extends Component {
   constructor(props) {
@@ -45,7 +45,7 @@ import { connect } from "react-redux";
   }
 
   addCart = data => {
-    this.props.addToCart(data,this.state.quantity);
+    this.props.addProductToCart(data);
     // console.log("add: " + JSON.stringify(data,));
   };
   render() {
@@ -276,4 +276,4 @@ function mapDispatchToProps(dispatch,state) {
 	};
 }
 
-export default connect( mapDispatchToProps,{addToCart})(Detail);
+export default connect( mapDispatchToProps,{addProductToCart})(Detail);

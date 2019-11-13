@@ -13,14 +13,14 @@ import Blog from "./components/blog/Blog";
 import Messages from "./components/Messages";
 import Contact from "./components/contact/Contact";
 import { connect } from "react-redux";
-import {getCart} from './redux/action/cartAction';
+import {getDataCart} from './redux/action/cartAction';
 import About from './components/About';
 import ListCategory from "./components/listCategory/ListCategory";
 import Footer from './components/footer/index';
 import Header from './components/header/index';
 class App extends Component {
     componentDidMount() {
-        this.props.getCart();
+        this.props.getDataCart();
     }
     render() {
         const {cart} = this.props;
@@ -58,4 +58,4 @@ function mapStateToProps(state) {
     };
 }
 
-export default connect(mapStateToProps, {getCart})(App);
+export default connect(mapStateToProps, {getDataCart})(App);

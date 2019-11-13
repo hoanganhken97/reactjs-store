@@ -1,11 +1,11 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { getCart } from "../../redux/action/cartAction";
+import { getDataCart } from "../../redux/action/cartAction";
 import { Link } from 'react-router-dom'
 class Header extends Component {
   render() {
     const { cart } = this.props;
-    console.log("cartHeader : " + JSON.stringify(cart));
+    console.log("cartHeader : " + JSON.stringify(cart.carts));
     return (
       <div>
         <header>
@@ -47,7 +47,7 @@ class Header extends Component {
 
                   <div
                     className="icon-header-item cl2 hov-cl1 trans-04 p-l-22 p-r-11 icon-header-noti js-show-cart"
-                    data-notify={cart.length}
+                    data-notify={cart.carts.length}
                   >
                     <i className="zmdi zmdi-shopping-cart"></i>
                   </div>
@@ -74,4 +74,4 @@ function mapStateToProps(state) {
   };
 }
 
-export default connect(mapStateToProps, { getCart })(Header);
+export default connect(mapStateToProps, { getDataCart })(Header);

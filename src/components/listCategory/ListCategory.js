@@ -1,6 +1,5 @@
 import React, {Component} from "react";
 import firebase from "../../utils/firebaseConfig";
-import {addToCart} from '../../redux/action/cartAction';
 import {connect} from "react-redux";
 import {ListdataProduct} from "../../redux/action/productAction";
 import {Link} from "react-router-dom";
@@ -98,9 +97,8 @@ class ListCategory extends Component {
 
 function mapDispatchToProps(dispatch, state) {
     return {
-        cart: state.cartReducers,
         data: state.productReducers,
     };
 }
 
-export default connect(mapDispatchToProps, {addToCart, ListdataProduct})(ListCategory);
+export default connect(mapDispatchToProps, { ListdataProduct})(ListCategory);
