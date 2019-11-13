@@ -18,12 +18,12 @@ export default (state = DEFAULT, action) => {
           ...state,
           carts: state.carts.map(e => {
             if (e.product.id !== action.id)
-              return {product: e.product, quantity: e.quantity + 1};
+              return {product: e.product, quantity: e.quantity + action.product.quantity};
             return e;
           }),
         };
       } else {
-        newCarts = state.carts.concat({product: action.product, quantity: 1});
+        newCarts = state.carts.concat({product: action.product, quantity: action.product.quantity});
       }
       return {
         ...state,
