@@ -15,6 +15,7 @@ import Contact from "./components/contact/Contact";
 import { connect } from "react-redux";
 import {getCart} from './redux/action/cartAction';
 import About from './components/About';
+import ListCategory from "./components/listCategory/ListCategory";
 import Footer from './components/footer/index';
 import Header from './components/header/index';
 class App extends Component {
@@ -37,6 +38,7 @@ class App extends Component {
                         <Route path="/about" component={About}/>
                         <Route path="/contact" component={Contact}/>
                         <Route path="/detail/:id" component={Detail}/>
+                        <Route path="/category/:title" component={ListCategory}/>
                         <Route path="/blogdetail" component={BlogDetail}/>
                         <Redirect to="/"/>
 
@@ -44,7 +46,7 @@ class App extends Component {
                 </div>
                 {/*<Home/>*/}
                 <Footer/>
-                
+
             </div>
         );
     }
