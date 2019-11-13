@@ -1,8 +1,5 @@
 import React, {Component} from "react";
-import {Link} from 'react-router-dom';
 import './contactCss.css';
-import bg01 from '../../images/bg-01.jpg';
-import email from '../../images/icons/icon-email.png';
 
 export default class Contact extends Component {
 
@@ -106,6 +103,7 @@ export default class Contact extends Component {
                     <div className="size-303" id="google_map" data-map-x="40.691446" data-map-y="-73.886787"
                          data-pin="images/icons/pin.png" data-scrollwhell="0" data-draggable="1" data-zoom="11"></div>
                 </div>
+
             </div>
         );
     }

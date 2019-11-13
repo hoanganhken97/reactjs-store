@@ -1,7 +1,5 @@
 import React, {Component} from "react";
-import {Link} from 'react-router-dom';
 import './aboutCss.css';
-import bg01 from '../../images/bg-01.jpg';
 
 export default class About extends Component {
 

@@ -3,7 +3,7 @@ import firebase from "../../utils/firebaseConfig";
 import {connect} from "react-redux";
 import {ListdataProduct} from "../../redux/action/productAction";
 import {Link} from "react-router-dom";
-import './styles.css'
+// import './styles.css'
 
 class ListCategory extends Component {
     constructor(props) {

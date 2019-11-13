@@ -1,5 +1,4 @@
 import React, {Component} from "react";
-import firebase from "../../utils/firebaseConfig";
 
 
 export default class Blog extends Component {

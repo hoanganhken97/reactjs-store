@@ -1,10 +1,12 @@
 import React, {Component} from "react";
+import {connect} from "react-redux";
 
-export default class Features extends Component {
+class Features extends Component {
     constructor(props) {
         super(props);
         this.state = {
             quantity: 1,
+            cart: [],
         };
     }
 
@@ -22,18 +24,22 @@ export default class Features extends Component {
             });
         }
     };
+
     render() {
+        const {cart} = this.props;
+        console.log('cartllong: ' + JSON.stringify(cart));
         return (
             <div className="container">
                 <div className="container">
                     <div className="bread-crumb flex-w p-l-25 p-r-15 p-t-30 p-lr-0-lg">
-                        <a href="index.html" className="stext-109 cl8 hov-cl1 trans-04">
+                        <a href="/" className="stext-109 cl8 hov-cl1 trans-04">
                             Home
-                            <div className="fa fa-angle-right m-l-9 m-r-10" aria-hidden="true"></div>
+                            <div className="fa fa-angle-right m-l-9 m-r-10" aria-hidden="true"/>
                         </a>
                         <span className="stext-109 cl4">Shoping Cart</span>
                     </div>
                 </div>
+
                 <form className="bg0 p-t-75 p-b-85">
                     <div className="container">
                         <div className="row">
@@ -48,60 +54,37 @@ export default class Features extends Component {
                                                 <th className="column-4">Quantity</th>
                                                 <th className="column-5">Total</th>
                                             </tr>
+                                            {cart.carts.map(data => {
+                                                return (
+                                                    <tr className="table_row">
+                                                        <td className="column-1">
+                                                            <div className="how-itemcart1">
+                                                                <img src={data.product.image[0]} alt="IMG"/>
+                                                            </div>
+                                                        </td>
+                                                        <td className="column-2">{data.product.title}</td>
+                                                        <td className="column-3">$ {data.product.price}</td>
+                                                        <td className="column-4">
+                                                            <div className="wrap-num-product flex-w m-l-auto m-r-0">
+                                                                <div onClick={this.down}
+                                                                     className="btn-num-product-down cl8 hov-btn3 trans-04 flex-c-m">
+                                                                    <i className="fs-16 zmdi zmdi-minus"></i>
+                                                                </div>
 
-                                            <tr className="table_row">
-                                                <td className="column-1">
-                                                    <div className="how-itemcart1">
-                                                        <img src="images/item-cart-04.jpg" alt="IMG"/>
-                                                    </div>
-                                                </td>
-                                                <td className="column-2">Fresh Strawberries</td>
-                                                <td className="column-3">$ 36.00</td>
-                                                <td className="column-4">
-                                                    <div className="wrap-num-product flex-w m-l-auto m-r-0">
-                                                        <div onClick={this.down}
-                                                            className="btn-num-product-down cl8 hov-btn3 trans-04 flex-c-m">
-                                                            <i className="fs-16 zmdi zmdi-minus"></i>
-                                                        </div>
-
-                                                        <input className="mtext-104 cl3 txt-center num-product"
-                                                               type="number" name="num-product1" value={this.state.quantity}
-                                                        />
-                                                        <div onClick={this.up}
-                                                            className="btn-num-product-up cl8 hov-btn3 trans-04 flex-c-m">
-                                                            <i className="fs-16 zmdi zmdi-plus"></i>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                                <td className="column-5">$ 36.00</td>
-                                            </tr>
-
-                                            <tr className="table_row">
-                                                <td className="column-1">
-                                                    <div className="how-itemcart1">
-                                                        <img src="images/item-cart-05.jpg" alt="IMG"/>
-                                                    </div>
-                                                </td>
-                                                <td className="column-2">Lightweight Jacket</td>
-                                                <td className="column-3">$ 16.00</td>
-                                                <td className="column-4">
-                                                    <div className="wrap-num-product flex-w m-l-auto m-r-0">
-                                                        <div
-                                                            className="btn-num-product-down cl8 hov-btn3 trans-04 flex-c-m">
-                                                            <i className="fs-16 zmdi zmdi-minus"/>
-                                                        </div>
-
-                                                        <input className="mtext-104 cl3 txt-center num-product"
-                                                               type="number" name="num-product2" value="1"/>
-
-                                                        <div
-                                                            className="btn-num-product-up cl8 hov-btn3 trans-04 flex-c-m">
-                                                            <i className="fs-16 zmdi zmdi-plus"/>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                                <td className="column-5">$ 16.00</td>
-                                            </tr>
+                                                                <input className="mtext-104 cl3 txt-center num-product"
+                                                                       type="number" name="num-product1"
+                                                                       value={data.quantity}
+                                                                />
+                                                                <div onClick={this.up}
+                                                                     className="btn-num-product-up cl8 hov-btn3 trans-04 flex-c-m">
+                                                                    <i className="fs-16 zmdi zmdi-plus"></i>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td className="column-5">$ {data.product.price}</td>
+                                                    </tr>
+                                                );
+                                            })}
                                         </table>
                                     </div>
 
@@ -220,3 +203,10 @@ export default class Features extends Component {
     }
 }
 
+function mapStateToProps(state) {
+    return {
+        cart: state.cartReducers,
+    };
+}
+
+export default connect(mapStateToProps, {},)(Features);
