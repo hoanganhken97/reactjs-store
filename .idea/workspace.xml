@@ -2,14 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="35b24a63-37a5-4693-a3e4-323a913b3117" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/listCategory/ListCategory.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/listCategory/styles.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Detail.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Detail.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Home.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/header/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/home/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/home/Home.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/listCategory/ListCategory.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/listCategory/ListCategory.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/listCategory/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/listCategory/styles.css" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -139,7 +135,14 @@
       <option name="project" value="LOCAL" />
       <updated>1573552831808</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="update list category">
+      <created>1573615052800</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1573615052800</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -177,6 +180,7 @@
     <MESSAGE value="update features, detail" />
     <MESSAGE value="about, contact" />
     <MESSAGE value="update cart" />
-    <option name="LAST_COMMIT_MESSAGE" value="update cart" />
+    <MESSAGE value="update list category" />
+    <option name="LAST_COMMIT_MESSAGE" value="update list category" />
   </component>
 </project>

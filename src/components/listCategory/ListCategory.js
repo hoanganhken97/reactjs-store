@@ -69,13 +69,24 @@ class ListCategory extends Component {
         console.log("data listCategory:" + JSON.stringify(this.state.dataSource));
         return (
             <div className="container">
+                <div className="bread-crumb flex-w p-l-25 p-r-15 p-t-30 p-lr-0-lg">
+                    <a href="/home" className="stext-109 cl8 hov-cl1 trans-04">
+                        Home
+                        <i
+                            className="fa fa-angle-right m-l-9 m-r-10"
+                            aria-hidden="true"
+                        ></i>
+                    </a>
+                    <span className="stext-109 cl4">{ptitle}</span>
+                </div>
                 <div className='row'>
+
                     {this.state.dataSource.map(data => {
                         if (data.category === ptitle) {
                             return (
                                 <div className="col-xs-3 col-sm-3 col-md-3 col-lg-3">
                                     <Link to={`/detail/${data.id}`}>
-                                        <ul className="list-group">
+                                        <ul className="list-group viewCate">
                                             <div className="imgListCate">
                                                 <img src={data.image[0]} className="App-logo"/>
                                             </div>
@@ -97,6 +108,7 @@ class ListCategory extends Component {
 
 function mapDispatchToProps(dispatch, state) {
     return {
+        cart: state.cartReducers,
         data: state.productReducers,
     };
 }
